@@ -17,24 +17,5 @@ def print_hi():
     joined_string = "".join(rez)
     print(joined_string)
 
-
-# create a new director
-def add_new_dir():
-    filepath = Path("temp/test.txt")
-    filepath.parent.mkdir(parents=True, exist_ok=True)
-
-def get_dir():
-    home = Path.home()
-    return home
-
-def create_file(): # каждый раз новый при вызове метода?
-    myfile = Path(Path.home(), "file.txt")
-    myfile.touch(exist_ok=True)
-    f = open(myfile)
-
-def get_list_dir():
-    p = Path('.')
-    return [x for x in p.iterdir() if x.is_dir()]
-
 if __name__ == '__main__':
     print_hi()
